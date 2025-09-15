@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "353227957885",
+    "project_id": "talagtna",
+    "storage_bucket": "talagtna.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:353227957885:android:ecbe070664b5676ea53314",
+        "android_client_info": {
+          "package_name": "online.webmadeeasy.talagtna"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqrnaQsHSB7ak8jJDKIzXYuw5nYgSopLI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

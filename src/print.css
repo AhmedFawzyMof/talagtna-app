@@ -1,0 +1,103 @@
+/* Printable Receipt Styles */
+.printable-area {
+  width: 75mm;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.875rem; /* Equivalent to text-sm */
+}
+
+/* Logo Styling */
+.printable-area .logo img {
+  filter: grayscale(100%);
+  max-width: 100%;
+  height: auto;
+}
+
+/* Divider Styling */
+.printable-area .divider {
+  border-top: 1px dashed #000;
+  margin: 1rem 0;
+}
+
+/* Header Information */
+.printable-area .header-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* User Details */
+.printable-area .user-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+/* Product Table */
+.printable-area .product-table {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 0.75rem 0;
+  text-align: center;
+}
+
+.printable-area .product-table dt,
+.printable-area .product-table dd {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6b7280; /* Tailwind's text-muted-foreground */
+}
+
+/* Product Rows */
+.printable-area .product-row {
+  width: 100%;
+  grid-column: span 4;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Total Amount */
+.printable-area .total {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media print {
+  @page {
+    size: 80mm auto;
+    margin: 0;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .printable-area {
+    width: 80mm;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  .printable-area,
+  .printable-area * {
+    visibility: visible;
+  }
+
+  .printable-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
