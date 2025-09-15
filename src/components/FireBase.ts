@@ -4,17 +4,14 @@ import { FirebaseMessaging } from "@capacitor-firebase/messaging";
 function usePushNotifications() {
   useEffect(() => {
     const initPush = async () => {
-      // Ask for permission
       const permStatus = await FirebaseMessaging.requestPermissions();
       if (permStatus.receive === "granted") {
         console.log("Push permission granted");
       }
 
-      // Get FCM token
       const token = await FirebaseMessaging.getToken();
       console.log("FCM Token:", token.token);
 
-      // 🔥 Correct event names
       FirebaseMessaging.addListener("tokenReceived", (event) => {
         console.log("New token:", event.token);
       });
