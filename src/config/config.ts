@@ -1,2 +1,2 @@
-export const BASE_URL = "http://localhost:3000/talgtna/api";
-export const IMAGE_BASE_URL = "http://localhost:3000/talgtna";
+export const BASE_URL = "https://talagtna.webmadeeasy.online/talgtna/api";
+export const IMAGE_BASE_URL = "https://talagtna.webmadeeasy.online/talgtna";
